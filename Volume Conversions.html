@@ -1,0 +1,127 @@
+<!--
+Conversion Calculator
+Written by Jason Rae
+volume Conversions.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Volume Conversions</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="style.css" rel="stylesheet">
+		<script src="myScript.js"></script>
+	</head>	
+	<body>	
+		<div class="test">
+			<h1>Volume Conversions</h1>
+		</div>
+		<table id="table">
+			<tr>
+				<td>
+					<label>Liter</label>
+					<input id="inputLiter" type="number" placeholder="Liter"
+					oninput="convertVolume(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>L</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Milliliter</label>
+					<input id="inputMilliliter" type="number" placeholder="Milliliter"
+					oninput="convertVolume(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>mL</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Imperial Gallon</label>
+					<input id="inputImpGal" type="number" placeholder="Imperial Gallon"
+					oninput="convertVolume(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>imp gal</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Imperial Quart</label>
+					<input id="inputImpQuart" type="number" placeholder="Imperial Quart"
+					oninput="convertVolume(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>imp qt</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Imperial Pint</label>
+					<input id="inputImpPint" type="number" placeholder="Imperial Pint"
+					oninput="convertVolume(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>imp pt</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Imperial Fluid Ounce</label>
+					<input id="inputImpFluidOz" type="number" placeholder="Imperial Fluid Ounce"
+					oninput="convertVolume(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>imp fl oz</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>US Gallon</label>
+					<input id="inputUsGal" type="number" placeholder="US Gallon"
+					oninput="convertVolume(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>us gal</label>
+				</td>
+			</tr>
+			<tr>
+				<td>	
+					<label>US Quart</label>
+					<input id="inputUsQuart" type="number" placeholder="US Quart"
+					oninput="convertVolume(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>us qt</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>US Pint</label>
+					<input id="inputUsPint" type="number" placeholder="US Pint"
+					oninput="convertVolume(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>us pt</label>
+				</td>
+			</tr>
+			<tr>
+				<td>	
+					<label>US Fluid Ounce</label>
+					<input id="inputUsFluidOz" type="number" placeholder="US Fluid Ounce"
+					oninput="convertVolume(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>us fl oz</label>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<button type="button" onclick="window.location.reload();">Refresh</button>
+		<button type="button" onclick="window.location.href = 'index.html';">Go Back</button>
+		<br>
+		<hr>
+		<button class="accordion">Formulas</button>
+		<div class="panel">
+			<p>This will hold the formulas used in these equations so you have access to them as well!</p>
+		</div>
+		<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+			for (i = 0; i < acc.length; i++) {
+				acc[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if (panel.style.maxHeight) {
+						panel.style.maxHeight = null;
+					} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+					} 
+				});
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<!--
+Conversion Calculator
+Written by Jason Rae
+Mass Conversions.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Mass Conversions</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="style.css" rel="stylesheet">
+		<script src="myScript.js"></script>
+	</head>
+	<body>	
+		<div class="test">
+			<h1>Mass Conversions</h1>
+		</div>
+		<table id="table">
+			<tr>
+				<td>
+					<label>Gram</label>
+					<input id="inputGram" type="number" placeholder="Gram"
+					oninput="convertMass(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>g</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Kilogram</label>
+					<input id="inputKilogram" type="number" placeholder="Kilogram"
+					oninput="convertMass(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>kg</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Milligram</label>
+					<input id="inputMilligram" type="number" placeholder="Milligram"
+					oninput="convertMass(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>mg</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Pound</label>
+					<input id="inputPound" type="number" placeholder="Pound"
+					oninput="convertMass(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>lb</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Ounce</label>
+					<input id="inputOunce" type="number" placeholder="Ounce"
+					oninput="convertMass(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>oz</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Stone</label>
+					<input id="inputStone" type="number" placeholder="Stone"
+					oninput="convertMass(this.id,this.value)" onchange="(this.id,this.value)">
+					<label>st</label>
+				</td>
+			</tr>
+		</table>
+		<br>		
+		<button type="button" onclick="window.location.reload();">Refresh</button>
+		<button type="button" onclick="window.location.href = 'index.html';">Go Back</button>
+		<br>
+		<hr>
+		<button class="accordion">Formulas</button>
+		<div class="panel">
+			<p>This will hold the formulas used in these equations so you have access to them as well!</p>
+		</div>
+		<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+			for (i = 0; i < acc.length; i++) {
+				acc[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if (panel.style.maxHeight) {
+						panel.style.maxHeight = null;
+					} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+					} 
+				});
+			}
+		</script>
+	</body>
+</html>
