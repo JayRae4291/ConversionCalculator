@@ -14,7 +14,7 @@ Time Conversions.html
 		<script src="myScript.js"></script>
 	</head>
 	<body>
-		<div class="test">
+		<div class="cTitle">
 			<h1>Time Conversions</h1>
 		</div>
 		<table id="table">
@@ -45,7 +45,7 @@ Time Conversions.html
 			<tr>
 				<td>
 					<label>Hour</label>
-					<input id="inputHour" type="number" placeholder="hour"
+					<input id="inputHour" type="number" placeholder="Hour"
 					oninput="convertTime(this.id,this.value)" onchange="(this.id,this.value)">
 					<label>hr</label>
 				</td>
@@ -58,7 +58,27 @@ Time Conversions.html
 		<hr>
 		<button class="accordion">Formulas</button>
 		<div class="panel">
-			<p>This will hold the formulas used in these equations so you have access to them as well!</p>
+			<table id="table2">
+				<thead>
+					<tr>
+						<th>Millisecond</th><th>Second</th><th>Minute</th><th>Hour</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>s = x/1000</td><td>ms = x*1000</td><td>ms = x*60000</td>
+						<td>ms = x*3.6e+6</td>
+					</tr>
+					<tr>
+						<td>min = x/60000</td><td>min = x/60</td><td>s = x*60</td>
+						<td>min = x*60</td>
+					</tr>
+					<tr>
+						<td>hr = x/3.6e+6</td><td>hr = x/3600</td><td>hr = x/60</td>
+						<td>s = x*3600</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 		<script>
 			var acc = document.getElementsByClassName("accordion");

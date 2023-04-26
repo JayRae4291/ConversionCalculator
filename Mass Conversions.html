@@ -14,7 +14,7 @@ Mass Conversions.html
 		<script src="myScript.js"></script>
 	</head>
 	<body>	
-		<div class="test">
+		<div class="cTitle">
 			<h1>Mass Conversions</h1>
 		</div>
 		<table id="table">
@@ -74,7 +74,36 @@ Mass Conversions.html
 		<hr>
 		<button class="accordion">Formulas</button>
 		<div class="panel">
-			<p>This will hold the formulas used in these equations so you have access to them as well!</p>
+			<table id="table2">
+				<thead>
+					<tr>
+						<th>Gram</th><th>Kilogram</th><th>Milligram</th><th>Pound</th>
+						<th>Ounce</th><th>Stone</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>kg = x/1000</td><td>mg = x*1e+6</td><td>g = x/1000</td>
+						<td>oz = x*16</td><td>lb = x/16</td><td>lb = x*14</td>
+					</tr>
+					<tr>
+						<td>mg = x*1000</td><td>lb = x*2.20462</td><td>kg = x/1e+6</td>
+						<td>g = x*453.592</td><td>g = x*28.3495</td><td>oz = x*224</td>
+					</tr>
+					<tr>
+						<td>lb = x*0.00220462</td><td>oz = x*35.274</td><td>lb = x*2.2046e-6</td>
+						<td>kg = x*0.453592</td><td>kg = x/35.274</td><td>kg = x*6.35029</td>
+					</tr>
+					<tr>
+						<td>oz = x*0.035274</td><td>g = x*1000</td><td>oz = x*3.5274e-5</td>
+						<td>st = x/14</td><td>mg = x*28349.5</td><td>mg = x*6.35e+6</td>
+					</tr>
+					<tr>
+						<td>st = x*0.000157473</td><td>st = x*0.15743</td><td>st = x*1.5747e-7</td>
+						<td>mg = x*453592</td><td>st = x/224</td><td>g = x*6350.29</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 		<script>
 			var acc = document.getElementsByClassName("accordion");
