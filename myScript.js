@@ -79,7 +79,7 @@ function convertVolume(source,valNum) {
 		inputUsQuart.value=(valNum*1.05669)
 	}
 	if (source=="inputMilliliter") {
-		inputLiter.value=(valNum/100)
+		inputLiter.value=(valNum/1000)
 		inputImpGal.value=(valNum*0.000219969)
 		inputImpFluidOz.value=(valNum/28.413)
 		inputImpPint.value=(valNum*0.00175975)
@@ -95,8 +95,8 @@ function convertVolume(source,valNum) {
 		inputImpFluidOz.value=(valNum*160)
 		inputImpPint.value=(valNum*8)
 		inputImpQuart.value=(valNum*4)
-		inputUsFluidOz.value=(valNum*153.772)
-		inputUsGal.value=(valNum*1.2001)
+		inputUsFluidOz.value=(valNum*153.722)
+		inputUsGal.value=(valNum*1.201)
 		inputUsPint.value=(valNum*9.6076)
 		inputUsQuart.value=(valNum*4.8038)
 	}
